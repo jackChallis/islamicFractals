@@ -1,6 +1,12 @@
-# examples/generate_examples.py
-from src.fractal_generator import IslamicFractalGenerator
-from src.utils import save_figure
+ #examples/generate_examples.py
+import os
+import sys
+from pathlib import Path
+
+# Add the parent directory to the Python path
+sys.path.append(str(Path(__file__).parent.parent))
+
+from islamic_fractals import IslamicFractalGenerator, save_figure
 
 def generate_examples():
     generator = IslamicFractalGenerator()
